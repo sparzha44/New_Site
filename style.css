@@ -1,1 +1,20 @@
+/* Стили для всего документа */
+body {
+ background-color: lightgrey; /* Черный фон */
+ color: black; /* Белый цвет текста для контраста */
+ font-family: Arial, sans-serif; /* Основной шрифт для текста */
+}
 
+.hdr a {
+ color: white; /* Цвет ссылок */
+ text-decoration: none; /* Убираем подчеркивание */
+ margin: 0 15px; /* Отступы между ссылками */
+ font-size: 1.2em; /* Размер шрифта для ссылок */
+}
+
+header {
+ background-color: black; /* Черный фон */
+ padding: 20px; /* Отступы внутри header */
+ text-align: center; /* Центрирование текста */
+ color: white
+}
