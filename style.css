@@ -19,3 +19,56 @@ header {
  color: white
 }
 
+footer{
+ background-color: black; /* Черный фон */
+ padding: 20px; /* Отступы внутри header */
+ text-align: center; /* Центрирование текста */
+ color: white
+}
+
+/* Общие стили для блока nowgig */
+.nowgig {
+ background-color: #ffffff; /* белый фон */
+ color: #000000; /* черный текст */
+ border: 2px solid #000; /* черная рамка */
+ padding: 20px;
+ max-width: 600px;
+ margin: 20px auto; /* центрирование по горизонтали */
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* легкая тень для объема */
+ font-family: Arial, sans-serif;
+ text-align: center;
+ border-radius: 8px; /* скругление углов */
+}
+
+/* Заголовок */
+.nowgig h1 {
+ font-size: 2em;
+ margin-bottom: 20px;
+ letter-spacing: 2px;
+}
+
+/* Изображение */
+.nowgig img {
+ width: 100%;
+ height: auto;
+ display: block;
+ margin-bottom: 20px;
+ border: 1px solid #000; /* черная рамка вокруг изображения */
+ border-radius: 4px;
+}
+
+/* Кнопка */
+.nowgig button {
+ background-color: #000; /* черный фон кнопки */
+ color: #fff; /* белый текст */
+ border: none;
+ padding: 12px 24px;
+ font-size: 1em;
+ cursor: pointer;
+ border-radius: 4px;
+ transition: background-color 0.3s;
+}
+
+.nowgig button:hover {
+ background-color: #333; /* темнее при наведении */
+}
