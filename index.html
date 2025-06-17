@@ -48,8 +48,14 @@
     <button type="button" id="increase" style="padding: 8px 12px;">+</button>
   </div>
 
+  <input type="checkbox" id="checkbox" class="check">
+  <label for="checkbox" id="termsLabel">
+    Согласен с условиями
+  </label> <br>
+  <div class="error"></div>
+  
   <!-- Кнопка купить -->
-  <button type="submit" style="width: 100%; padding: 12px; background-color: #000; color: #fff; border: none; border-radius: 4px; font-size: 1em; cursor: pointer;">Купить</button>
+  <button type="submit" id="buyButton" style="width: 100%; padding: 12px; background-color: #000; color: #fff; border: none; border-radius: 4px; font-size: 1em; cursor: pointer;">Купить</button>
 </form>
 </div>
 
@@ -74,7 +80,7 @@
 <button id="forbidden-button" onmouseover="changeButtonText()">Не нажимать!</button>
 </div>
 
-<h1 align="center">Сортировка массива</h1>
+<h2 align="center">Сортировка массива</h2>
 
 <div class="sortirovka">
   <label for="mass">Введите числа через запятую:</label>
