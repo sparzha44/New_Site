@@ -92,4 +92,39 @@ UnnomineGigs — это место, где рождаются новые тал�
             }
         });
 
-
+        function sortNumbers() {
+          const input = document.getElementById('mass').value;
+          const container = document.querySelector('.sortirovka');
+          
+          // Удаляем предыдущий результат, если он есть
+          const oldResult = document.getElementById('sort-result');
+          if (oldResult) {
+            container.removeChild(oldResult);
+          }
+        
+          // Преобразуем строку в массив чисел
+          const numbers = input.split(',')
+            .map(item => parseFloat(item.trim()))
+            .filter(item => !isNaN(item));
+        
+          // Создаем элемент для результата
+          const resultElement = document.createElement('p');
+          resultElement.id = 'sort-result';
+          
+          if (numbers.length === 0) {
+            resultElement.textContent = 'Ошибка: введите числа через запятую (например: 5, 2, 8, 1)';
+            resultElement.style.color = 'red';
+          } else {
+            // Сортируем числа
+            const sortedNumbers = [...numbers].sort((a, b) => a - b);
+            
+            resultElement.innerHTML = `
+              <strong>Введённые числа:</strong> ${numbers.join(', ')}<br>
+              <strong>Отсортированные числа:</strong> ${sortedNumbers.join(', ')}
+            `;
+            resultElement.style.color = 'black';
+          }
+        
+          // Добавляем результат в конец контейнера
+          container.appendChild(resultElement);
+        }
