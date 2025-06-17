@@ -11,13 +11,14 @@
 
 
   <header>
-   <h1>UnnomineGigs</h1>
-   <nav class="hdr">
-       <a href="">Главная</a>
-       <a href="">Афиша</a>
-       <a href="">Регистрация</a>
-       <a href="">Каталог</a>
-   </nav>
+    <h1>UnnomineGigs</h1>
+    <nav class="hdr">
+        <a href="">Главная</a>
+        <a href="">Афиша</a>
+        <a href="">Регистрация</a>
+        <a href="">Каталог</a>
+        <a href="" id="theme-toggle">Светлая тема</a>
+    </nav>
 </header>
 
 <h1 align="center">
@@ -50,8 +51,29 @@
   <!-- Кнопка купить -->
   <button type="submit" style="width: 100%; padding: 12px; background-color: #000; color: #fff; border: none; border-radius: 4px; font-size: 1em; cursor: pointer;">Купить</button>
 </form>
-
 </div>
+
+
+<div class="fm-corontainer">
+  <h2 style="text-align: center;">Сложение чисел</h2>
+  <form id="additionForm">
+      <div class="form-group">
+          <label for="number1">Первое число:</label>
+          <input type="number" id="number1" required>
+      </div>
+      <div class="form-group">
+          <label for="number2">Второе число:</label>
+          <input type="number" id="number2" required>
+      </div>
+      <button type="button" onclick="addNumbers()">Сложить</button>
+  </form>
+  <div id="result"></div>
+</div>
+
+<div class="knopka">
+<button id="forbidden-button" onmouseover="changeButtonText()">Не нажимать!</button>
+</div>
+
 
 <footer>
 <h1>Наши контакты:</h1>

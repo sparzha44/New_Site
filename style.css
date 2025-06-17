@@ -19,6 +19,34 @@ header {
  color: white
 }
 
+.hdr a {
+ color: white;
+ text-decoration: none;
+ margin-left: 1rem;
+ padding: 0.5rem;
+ border-radius: 4px;
+ transition: all 0.3s ease;
+}
+
+.hdr a:hover {
+ background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Стили для светлой темы */
+.light-theme header {
+ background-color: white;
+ color: #333;
+ box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.light-theme .hdr a {
+ color: #333;
+}
+
+.light-theme .hdr a:hover {
+ background-color: rgba(0, 0, 0, 0.1);
+}
+
 footer{
  background-color: black; /* Черный фон */
  padding: 20px; /* Отступы внутри header */
@@ -71,4 +99,22 @@ footer{
 
 .nowgig button:hover {
  background-color: #333; /* темнее при наведении */
+}
+
+.knopka button {
+ padding: 15px 30px;
+ font-size: 20px;
+ background-color: black;
+ color: white;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: all 0.3s;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.knopka button:hover {
+ background-color: #cc0000;
+ transform: translateY(-2px);
+ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
