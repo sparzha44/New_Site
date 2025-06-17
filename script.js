@@ -22,6 +22,23 @@ UnnomineGigs — это место, где рождаются новые тал�
     }
   });
 
+  document.getElementById('buyButton').addEventListener('click', function(event) {
+    const checkbox = document.getElementById('checkbox');
+    const label = document.getElementById('termsLabel');
+    
+    if (!checkbox.checked) {
+      event.preventDefault(); // Отменяем отправку формы
+      label.style.color = 'red';
+      label.style.textDecoration = 'underline';
+      
+      // Возвращаем обычный стиль через 2 секунды
+      setTimeout(() => {
+        label.style.color = '';
+        label.style.textDecoration = '';
+      }, 2000);
+    }
+  });
+
   // Обработка отправки формы
   document.getElementById('purchaseForm').addEventListener('submit', function(event) {
     const age = parseInt(ageInput.value);
@@ -128,3 +145,4 @@ UnnomineGigs — это место, где рождаются новые тал�
           // Добавляем результат в конец контейнера
           container.appendChild(resultElement);
         }
+
