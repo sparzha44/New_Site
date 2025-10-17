@@ -118,3 +118,37 @@ footer{
  transform: translateY(-2px);
  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+.video-player {
+  background: lightgray;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+#progress {
+  width: 300px;
+  margin: 0 10px;
+}
+
+#volume {
+  width: 100px;
+  margin-left: 10px;
+}

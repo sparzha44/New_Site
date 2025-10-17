@@ -146,3 +146,58 @@ UnnomineGigs — это место, где рождаются новые тал�
           container.appendChild(resultElement);
         }
 
+const video = document.getElementById('video');
+const playPauseBtn = document.getElementById('play-pause');
+const playPauseIcon = document.getElementById('play-pause-icon');
+const currentTimeSpan = document.getElementById('current-time');
+const durationSpan = document.getElementById('duration');
+const progress = document.getElementById('progress');
+const volume = document.getElementById('volume');
+
+let isPlaying = false;
+
+// Обновление времени
+video.addEventListener('loadedmetadata', () => {
+  durationSpan.textContent = formatTime(video.duration);
+});
+
+// Обновление прогресса и времени
+video.addEventListener('timeupdate', () => {
+  currentTimeSpan.textContent = formatTime(video.currentTime);
+  progress.value = (video.currentTime / video.duration) * 100;
+});
+
+// Кнопка Play/Pause
+playPauseBtn.addEventListener('click', () => {
+  if (video.paused || video.ended) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});
+
+video.addEventListener('play', () => {
+  playPauseIcon.src = 'img/pause.png';
+});
+
+video.addEventListener('pause', () => {
+  playPauseIcon.src = 'img/play.png';
+});
+
+// Перемотка видео через прогрессбар
+progress.addEventListener('input', () => {
+  const seekTime = (progress.value / 100) * video.duration;
+  video.currentTime = seekTime;
+});
+
+// Регулировка громкости
+volume.addEventListener('input', () => {
+  video.volume = volume.value;
+});
+
+// Формат времени (минуты:секунды)
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+}
